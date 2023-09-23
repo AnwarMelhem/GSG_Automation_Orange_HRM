@@ -54,7 +54,7 @@ describe('API Exercises', () => {
 
 
 
-    it('Create User', () => {
+    it.only('Create User', () => {
         cy.request({
             method: 'POST',
             url: '/web/index.php/api/v2/admin/users',
