@@ -67,9 +67,8 @@ describe('API Exercises', () => {
             }
         }).then((Response) => {
             expect(Response).property('status').to.equal(200);
-             ResponseID = Response.body.data.id;
-  
-          
+            ResponseID = Response.body.data.id;
+
         })
 
     })
@@ -80,7 +79,7 @@ describe('API Exercises', () => {
             method: 'DELETE',
             url: '/web/index.php/api/v2/admin/users',
             body: {
-                ids: [ ResponseID]
+                ids: [ResponseID]
             }
         }).then((Response) => {
             expect(Response).property('status').to.equal(200);
