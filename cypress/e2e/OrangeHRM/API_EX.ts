@@ -84,7 +84,6 @@ describe('API Exercises', () => {
             }
         }).then((Response) => {
             expect(Response).property('status').to.equal(200);
-
         })
     });
 
