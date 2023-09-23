@@ -73,28 +73,7 @@ class First_Automation_Assignment {
     cy.wait(4000);
     this.elements.EditEmployeeIcon().click({ multiple: true });
    }
-    UsingAPI(EmployeeID: string, firstName: string, LastName: string, MiddleName: string) {
-        //this.elements.MainMenuItems().contains('PIM').click();
-        // this.elements.SearchByIdInput().type(EmployeeID);
-        // this.elements.SearchButton().click({ force: true }).click({ force: true });
-        // cy.wait(4000);
-        // this.elements.EditEmployeeIcon().click({ multiple: true });
-        // this.elements.AssertionForFirstNameAndLastName().should('be.visible');
-        // this.elements.AssertionForFirstNameAndLastName().should('contain', firstName + " " + LastName)
-        // this.elements.NickNameInput().type('Anwar Melhem'),
-        //     this.elements.LicenseExpiryDatePicker().click({ force: true });
-        // cy.get(':nth-child(28) > .oxd-calendar-date').click();
-        // this.elements.NationalityDDL().click({ force: true });
-        // cy.get(':nth-child(3) > span').click({ force: true });
-        // cy.get(':nth-child(2) > :nth-child(2) > .oxd-radio-wrapper > label > .oxd-radio-input').click({ force: true });
-        // this.elements.SaveEmpInfo().click({ force: true })
-        // this.elements.EmployeeList().click();
-        // this.elements.SearchByIdInput().type(EmployeeID);
-        // this.elements.SearchButton().click({ force: true }).click({ force: true });
-        // // this.elements.IDCoulmnContent().should('contain', EmployeeID);
-        // this.elements.First_LastContent().should('contain', firstName + " " + MiddleName);
-        // this.elements.LastNameContent().should('contain', LastName);
-    }
+
 
 }
 export default First_Automation_Assignment;
