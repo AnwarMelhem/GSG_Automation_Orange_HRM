@@ -3,7 +3,7 @@
 
 ***********************************************************
 
-### First Assignment Links:
+### First Automation Assignment Links:
 - [[OrangeHRM] First_Automation_Assignment.spec.ts](https://github.com/AnwarMelhem/GSG_Automation_Orange_HRM/blob/main/cypress/e2e/OrangeHRM/First_Automation_Assignment.spec.ts)
 
 - [[Page Object] First_Automation_Assignment.ts](https://github.com/AnwarMelhem/GSG_Automation_Orange_HRM/blob/main/cypress/e2e/PageObjectes/First_Automation_Assignment.ts)
