@@ -14,42 +14,13 @@ function generateRandom4DigitNumber(): number {
 }
 const randomNumber: number = generateRandom4DigitNumber();
 
-//This Is A Scenario For Adding A User Using The UI From The Start. 
-describe('Employees Table Data Validation All Step Using UI', () => {
-    beforeEach(function () {
-        cy.visit('https://opensource-demo.orangehrmlive.com')
-        loginObj.login("Admin", "admin123");
-        cy.fixture('employeeinfo').as('EmpInfo')
-    })
-
-    it('Employees Table Data Validation', () => {
-       
-        Obj.Clicks_To_PIM_Tab();
-
-        cy.get('@EmpInfo').then((infoData: any) => {
-            Obj.Add_Employee_Form(infoData.FirstName, infoData.MiddleName, infoData.LastName, infoData.EmployeeID, infoData.UserName, infoData.Password, infoData.ConfirmPass);
-        })
-        
-        cy.get('@EmpInfo').then((infoData: any) => {
-            Obj.Assertion_FOR_First_Last_Name(infoData.FirstName, infoData.LastName);
-        })
-        Obj.Fill_Employee_Data();
-        cy.get('@EmpInfo').then((infoData: any) => {
-            Obj.Search_For_UserID(infoData.EmployeeID);
-        })
-        
-    })
-})
-
-
-
-
+//This Is A Scenario For Adding A User Using The API As Prerequest.
 describe('Employees Table Data Validation When Add Employee Using API', () => {
     beforeEach(function () {
 
         cy.visit('https://opensource-demo.orangehrmlive.com')
         loginObj.login("Admin", "admin123");
-
+        cy.fixture('employeeinfo').as('EmpInfo')
         cy.request({
             method: 'POST',
             url: 'https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/pim/employees',
@@ -72,20 +43,55 @@ describe('Employees Table Data Validation When Add Employee Using API', () => {
 
     })
 
-    it('Add Employee Using UI ', () => {
-        
+    it('Employees Table Data Validation', () => {
+
         Obj.Clicks_To_PIM_Tab();
         Obj.Search_For_UserID(ResponseemployeeId);
         Obj.Edit_Employee_By_Click_On_Edit_Icon();
-        Obj.Assertion_FOR_First_Last_Name(FirstName,LastName);
-        Obj.Fill_Employee_Data();
+        Obj.Assertion_FOR_First_Last_Name(FirstName, LastName);
+        cy.get('@EmpInfo').then((infoData: any) => {
+            Obj.Fill_Employee_Data(infoData.NickName, infoData.DrivesLicenseNumber, infoData.SNN_Number, infoData.SIN_Number);
+        })
         Obj.Search_For_UserID(ResponseemployeeId);
-        Obj.Validation_Table_Content(ResponseemployeeId,FirstName,LastName,middleName);
-        
+        Obj.Validation_Table_Content(ResponseemployeeId, FirstName, LastName, middleName);
+
+    })
+})
+
+
+//This Is A Scenario For Adding A User Using The UI From The Start. 
+describe('Employees Table Data Validation All Step Using UI', () => {
+    beforeEach(function () {
+        cy.visit('https://opensource-demo.orangehrmlive.com')
+        loginObj.login("Admin", "admin123");
+        cy.fixture('employeeinfo').as('EmpInfo')
     })
 
+    it('Employees Table Data Validation', () => {
 
+        Obj.Clicks_To_PIM_Tab();
+
+        cy.get('@EmpInfo').then((infoData: any) => {
+            Obj.Add_Employee_Form(infoData.FirstName, infoData.MiddleName, infoData.LastName, infoData.EmployeeID, infoData.UserName, infoData.Password, infoData.ConfirmPass);
+        })
+
+        cy.get('@EmpInfo').then((infoData: any) => {
+            Obj.Assertion_FOR_First_Last_Name(infoData.FirstName, infoData.LastName);
+        })
+        cy.get('@EmpInfo').then((infoData: any) => {
+            Obj.Fill_Employee_Data(infoData.NickName, infoData.DrivesLicenseNumber, infoData.SNN_Number, infoData.SIN_Number);
+        })
+        cy.get('@EmpInfo').then((infoData: any) => {
+            Obj.Search_For_UserID(infoData.EmployeeID);
+        })
+
+    })
 })
+
+
+
+
+
 
 
 

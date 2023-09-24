@@ -1,9 +1,15 @@
 {
-    "FirstName":"Anwar45",
-    "MiddleName":"Ahmad45",
-    "LastName":"Melhem45",
-    "EmployeeID":"4054054189",
-    "UserName":"Anwar_Melhem_2051",
+    "FirstName":"Anwar76",
+    "MiddleName":"Ahmad76",
+    "LastName":"Melhem76",
+    "EmployeeID":"4054054176",
+    "UserName":"Anwar_Melhem_2076",
     "Password":"!A1234567a",
-    "ConfirmPass":"!A1234567a"
+    "ConfirmPass":"!A1234567a",
+    "NickName":"Anwar76",
+    "DrivesLicenseNumber":"123456",
+    "SNN_Number":"11111",
+    "SIN_Number":"22222"
+
 }
+
