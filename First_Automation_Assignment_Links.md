@@ -3,8 +3,8 @@
 ***********************************************************
 ### First Assignment Links:
 - [First_Automation_Assignment.spec.ts](https://github.com/AnwarMelhem/GSG_Automation_Orange_HRM/blob/main/cypress/e2e/OrangeHRM/First_Automation_Assignment.spec.ts)
-<br>
+
 - [Page Object First_Automation_Assignment.ts](https://github.com/AnwarMelhem/GSG_Automation_Orange_HRM/blob/main/cypress/e2e/PageObjectes/First_Automation_Assignment.ts)
-<br>
+
 - [Fixture employeeInfo.json](https://github.com/AnwarMelhem/GSG_Automation_Orange_HRM/blob/main/cypress/fixtures/employeeInfo.json)
 
