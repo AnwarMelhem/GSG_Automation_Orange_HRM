@@ -10,8 +10,8 @@ export default defineConfig({
       allureWriter(on, config);
       return config;
     },
-    //baseUrl: 'https://opensource-demo.orangehrmlive.com',
-    baseUrl:`https://conduit.productionready.io`,
+    baseUrl: 'https://opensource-demo.orangehrmlive.com',
+    //baseUrl:`https://conduit.productionready.io`,
     env: {
       allureReuseAfterSpec: true,
       download_dir: "./cypress/downloads",

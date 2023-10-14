@@ -1,4 +1,6 @@
 import userInit from "../../initializer/userInit";
+import {ICreateEmployeeResponse} from "../../Helper/Response/userAPIResponse"
+import {reject,resolve} from "cypress/types/bluebird"
 const baseUrl=Cypress.config().baseUrl;
 export const URLs={
     users:`${baseUrl}/api/users`
@@ -32,7 +34,11 @@ export const URLs={
     }
 
     addUserViaAPI(){
-        cy.addNewUser(URLs.users,userInit.initUser())
+        return new Cypress.Promise<ICreateEmployeeResponse>((resolve,reject)=>{
+            cy.addNewUser(URLs.users,userInit.initUser())
+
+        })
+        
     }
 
  
