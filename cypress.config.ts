@@ -23,8 +23,8 @@ export default defineConfig({
     videosFolder: "allure-results/",
     screenshotOnRunFailure: true,
     retries:{
-      "runMode":1,
-      "openMode":1
+      "runMode":0,
+      "openMode":0
     }
   },
 
