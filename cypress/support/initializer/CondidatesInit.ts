@@ -12,7 +12,7 @@ export default class userCandidates {
             keywords: "anwar1",
             lastName: "anwar1",
             middleName: "anwar1",
-            vacancyId:8
+            vacancyId:4
         }
         return createCandidatesPayload;
     }
