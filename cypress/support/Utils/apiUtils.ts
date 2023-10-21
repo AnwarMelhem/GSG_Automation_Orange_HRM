@@ -9,6 +9,8 @@ declare global {
         addNewUser:(requestURL:string,userPayload:ICreateEmployeePayload)=> Chainable<ICreateEmployeeResponse>
         addNewCandiate:(requestURL:string,userPayload:ICreateCandidatesPayload)=>Chainable<ICreateCandidatesResponse>
         checkTableRow:(tableSelector:string,rowData:string[])=>Chainable<void>
+        shouldContainOrContinue: (subject: JQuery<HTMLElement>, text: string) => Chainable<JQuery<HTMLElement>>;
+        
       }
      }
     }

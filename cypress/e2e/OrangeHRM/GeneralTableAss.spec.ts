@@ -17,11 +17,11 @@ describe('Flow', () => {
         cy.visit('https://opensource-demo.orangehrmlive.com')
         loginObj.login("Admin", "admin123");
 
-        RecruitmentAPIOBJ.addUserViaAPI().then((candidateID) => {
-            savedCandidateID = candidateID
-        }).catch((error) => {
-                console.error("Error:", error);
-        });
+        // RecruitmentAPIOBJ.addUserViaAPI().then((candidateID) => {
+        //     savedCandidateID = candidateID
+        // }).catch((error) => {
+        //         console.error("Error:", error);
+        // });
         
       
 
@@ -33,7 +33,7 @@ describe('Flow', () => {
             {
               Vacancy: "Associate IT Manager",
               Candidate: "anwar1 anwar1 anwar1",
-              "Hiring Manager": "Alberto Enrique Bellera",
+              "Hiring Manager": "Peter Mac Anderson",
               "Date of Application": "2023-10-25",
               Status: "Application Initiated",
             }

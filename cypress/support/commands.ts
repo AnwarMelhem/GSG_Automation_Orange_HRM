@@ -35,14 +35,16 @@
 //     }
 //   }
 // }
-declare namespace Cypress{
+declare global {
+namespace Cypress{
     interface Chainable<Subject>{
         getByPlaceholder: typeof getByPlaceholder
     }
 
-}
+}}
 function getByPlaceholder(field: string){
     return cy.get('[placeholder="'+field+'"]');
 }
 Cypress.Commands.add('getByPlaceholder',getByPlaceholder)
 
+import "cypress-file-upload"

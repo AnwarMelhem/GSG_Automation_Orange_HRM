@@ -1,6 +1,5 @@
 class Common_Table_Fun {
 
-
     checkRows(rowSelector: string, args: {}[]) {
       const headers: string[] = [];
       cy.get(rowSelector)
@@ -23,7 +22,8 @@ class Common_Table_Fun {
             for (let i = 0; i < headers.length; i++) {
               cy.wrap(cellsOfRow)
                 .eq(i + 1)
-                .should("contain", rowData[headers[i]]);
+                .should("contain", rowData[headers[i]])
+              
             }
           });
       });
